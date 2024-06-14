@@ -1,4 +1,4 @@
-# "Framework Vue.js" homework
+# "Framework Vue.js" homework (vue)
 
 
 ## SEMINAR 1
