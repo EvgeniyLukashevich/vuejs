@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="script.js" defer></script>
+
+        <title>Seminar 1. Homework</title>
+    </head>
+
+    <body>
+        <div id="task1">
+            <h3>Задание 1</h3>
+            <button @click="reverse()">{{textButton}}</button>
+        </div>
+        <div id="task2">
+            <h3>Задание 2</h3>
+            <button @click="addItem()">Добавить</button>
+            <ul>
+                <li v-for="(item, index) in items" :key="index" @click="removeItem(index)" style="cursor: pointer;">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
