@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="script.js" defer></script>
+        <style>
+            .products {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 30vw;
+            }
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        </style>
+
+        <title>Seminar 2. Homework</title>
+    </head>
+    <body>
+        <div class="products" id="app">
+            <h1>Список товаров:</h1>
+            <div class="buttons">
+                <button @click="sortUp">Сортировать по возрастанию цены</button>
+                <button @click="sortDown">Сортировать по убыванию цены</button>
+            </div>
+            <ul>
+                <p v-for="(product, index) in products" :key="index + 1">
+                    #{{ index + 1 }} {{ product.name }} - {{ product.price }}
+                </p>
+            </ul>
+        </div>
+    </body>
+</html>
